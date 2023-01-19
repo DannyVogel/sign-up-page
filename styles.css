@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+    overflow: hidden;
+}
+
+:root {
+    background-color: azure;
+    
+}
+
+:root.dark {
+    background-color:darkslategrey;
+    color: white;
+}
+
+body {
+    display: flex;
+    align-items: center;
+}
+
+header {
+    position: relative;
+    width: 40%;
+    height: 100vh;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+
+.toggle-darkMode {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+main {
+    width: 60%;
+}
+
+.intro-head {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.intro-head > p {
+    margin-bottom: 20px;
+    width: 500px;
+}
+
+form {
+    background-color: aqua;
+    padding-bottom: 5px;
+}
+
+form h3 {
+    padding: 20px 0 0 20px;
+}
+
+.input-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 0;
+    justify-content: space-between;
+    width: 500px;
+    padding: 20px;
+}
+
+input {
+    display: block;
+    width: auto;
+}
+
+.btn-container {
+    padding-left: 20px;
+}
+
+.signUp-btn {
+    margin: 20px 0;
+}
+
+@media only screen and (max-width: 800px),
+            screen and (max-height: 600px) {
+    body {
+      flex-direction: column;
+    }
+
+    header {
+        height: 200px;
+        width: 100vw;
+        margin-bottom: 10px;
+    }
+
+    .background-image {
+        width: 100vw;
+        height: 100%;
+        object-fit: cover;
+        object-position: 0 30%;
+    }
+
+    main {
+        width: auto;
+    }
+
+    .input-container {
+        width: auto;
+        gap: 10px;
+    }
+
+    .intro-head > p {
+        margin-bottom: 20px;
+        width: auto;
+    }
+
+    label {
+        width: 43vw;
+        padding: 10px 0;
+    }
+
+    input {
+        width: 100%;
+    }
+}

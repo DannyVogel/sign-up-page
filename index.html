@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./javascript.js" defer></script>
+    <title>Sign Up Page</title>
+</head>
+<body>
+    <header>
+        <img src="./images/sun.jpg" alt="#" class="background-image">
+        <div class="logo">
+            <h1>Tribune Newsletter</h1>
+        </div>
+    </header>
+    <main>
+        <button type="button "class="toggle-darkMode" onclick="toggleDarkMode()">🌙</button>
+        <div class="intro-head">
+            <p>This is not a real online service! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, commodi!</p>
+            <p>Sign up now to get started.</p>
+            <p>You know you want to.</p>
+        </div>
+        <form>
+            <h3>Let's do this!</h3>
+            <div class="input-container">
+                <label for="firstName">First Name:
+                    <input type="text" id="firstName">
+                </label>
+                <label for="lastName">Last Name:
+                    <input type="text" id="lastName">
+                </label>
+                <label for="email">E-mail:
+                    <input type="email" id="email">
+                </label>
+                <label for="phoneNum">Phone Number:
+                    <input type="number" id="phoneNum">
+                </label>
+                <label for="password">Password:
+                    <input type="password" id="password">
+                </label>
+                <label for="confirmPassword">Confirm Password:
+                    <input type="password" id="confirmPassword">
+                </label>
+            </div>
+        </form>
+        <div class="btn-container">
+            <button class="signUp-btn">Sign Up</button>
+            <p>Already have an account? <a href="">Log In</a></p>
+        </div>    
+    </main>
+</body>
+</html>
