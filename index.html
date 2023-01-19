@@ -22,33 +22,67 @@
             <p>Sign up <em>now</em> to get started.</p>
             <p>You <em>know</em> you want to.</p>
         </div>
-        <form>
+        <form id="signUp" onsubmit="processForm(event)">
             <h3>Let's do this!</h3>
             <div class="input-container">
                 <label for="firstName">First Name:
-                    <input type="text" id="firstName" placeholder="First Name" required>
+                    <input 
+                        type="text" 
+                        id="firstName" 
+                        placeholder="First Name" 
+                        required autocomplete="off">
                 </label>
                 <label for="lastName">Last Name:
-                    <input type="text" id="lastName" placeholder="Last Name" required>
+                    <input 
+                        type="text" 
+                        id="lastName" 
+                        placeholder="Last Name" 
+                        required autocomplete="off">
                 </label>
                 <label for="email">E-mail:
-                    <input type="email" id="email" placeholder="E-mail" required>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        placeholder="E-mail" 
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                        required 
+                        autocomplete="off">
                 </label>
                 <label for="phoneNum">Phone Number:
-                    <input type="number" id="phoneNum" placeholder="Phone Number">
+                    <input 
+                        type="text" 
+                        id="phoneNum" 
+                        placeholder="Phone Number" 
+                        pattern="\d*" 
+                        autocomplete="off" 
+                        title="numbers only">
                 </label>
                 <label for="password">Password:
-                    <input type="password" id="password" placeholder="Password" required>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        placeholder="Password" 
+                        pattern=".{8,}" 
+                        title="Eight or more characters" 
+                        required 
+                        autocomplete="off">
                 </label>
                 <label for="confirmPassword">Confirm Password:
-                    <input type="password" id="confirmPassword" placeholder="Password" required>
+                    <input 
+                        type="password" 
+                        id="confirmPassword" 
+                        placeholder="Password" 
+                        required 
+                        autocomplete="off">
                 </label>
             </div>
         </form>
+
         <div class="btn-container">
-            <button class="signUp-btn">Sign Up</button>
-            <p>Already have an account? <a href="">Log In</a></p>
+            <button class="signUp-btn" form="signUp">Sign Up</button>
+            <p class="finalP">Already have an account? <a href="">Log In</a></p>
         </div>    
+
     </main>
 </body>
 </html>
