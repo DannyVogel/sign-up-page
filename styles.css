@@ -10,12 +10,15 @@
 
 :root {
     background-color: azure;
-    
+    --box-shadow-color: rgba(0,0,0,0.7);
+    --text-color: black;
+    color: var(--text-color);
 }
 
 :root.dark {
     background-color:darkslategrey;
-    color: white;
+    --text-color: white;
+    --box-shadow-color: rgba(255,255,255)
 }
 
 body {
@@ -41,6 +44,8 @@ header {
     left: 50%;
     text-align: center;
     transform: translate(-50%, -50%);
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.411);
 }
 
 
@@ -64,9 +69,16 @@ main {
     width: 500px;
 }
 
+p {
+    font-weight: bold;
+}
+
 form {
-    background-color: aqua;
+    background-color: rgb(96, 156, 156);
     padding-bottom: 5px;
+    box-shadow: 5px -1px 13px -2px var(--box-shadow-color);
+    -webkit-box-shadow: 5px -1px 13px -2px var(--box-shadow-color);
+    -moz-box-shadow: 5px -1px 13px -2px var(--box-shadow-color);
 }
 
 form h3 {
@@ -80,11 +92,15 @@ form h3 {
     justify-content: space-between;
     width: 500px;
     padding: 20px;
+    font-variant: small-caps;
 }
 
 input {
     display: block;
     width: auto;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-top: 3px;
 }
 
 .btn-container {
@@ -93,6 +109,37 @@ input {
 
 .signUp-btn {
     margin: 20px 0;
+}
+
+button {
+    border-radius: 5px;
+    border: 2px solid;
+    width: auto;
+    padding: 8px;
+    line-height: 1;
+    background-color: rgb(228, 138, 106);
+    font-weight: bold;
+    box-shadow: 5px 4px 5px -4px var(--box-shadow-color);
+    -webkit-box-shadow: 5px 4px 5px -4px var(--box-shadow-color);
+    -moz-box-shadow: 5px 4px 5px -4px var(--box-shadow-color);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(224, 158, 133);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--text-color);
+}
+
+a:hover {
+    color: var(--text-color);
+    opacity: 0.6;
 }
 
 @media only screen and (max-width: 800px),
