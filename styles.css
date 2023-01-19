@@ -9,7 +9,7 @@
 }
 
 :root {
-    background-color: azure;
+    background-color: #FFF6BD;
     --box-shadow-color: rgba(0,0,0,0.7);
     --text-color: black;
     color: var(--text-color);
@@ -22,7 +22,15 @@
 }
 
 body {
+    position: relative;
     display: flex;
+    align-items: center;
+}
+
+.confirmation {
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -30,6 +38,7 @@ header {
     position: relative;
     width: 40%;
     height: 100vh;
+    border-radius: 5px;
 }
 
 .background-image {
@@ -99,8 +108,17 @@ input {
     display: block;
     width: auto;
     border-radius: 5px;
-    border: 1px solid black;
+    border: 2px solid black;
     margin-top: 3px;
+}
+
+input::placeholder {
+    font-size: 10px;
+}
+
+input:focus {
+    border: 2px solid blue;
+    outline: none;
 }
 
 .btn-container {
@@ -117,7 +135,7 @@ button {
     width: auto;
     padding: 8px;
     line-height: 1;
-    background-color: rgb(228, 138, 106);
+    background-color: rgb(96, 156, 156);
     font-weight: bold;
     box-shadow: 5px 4px 5px -4px var(--box-shadow-color);
     -webkit-box-shadow: 5px 4px 5px -4px var(--box-shadow-color);
@@ -126,7 +144,7 @@ button {
 }
 
 button:hover {
-    background-color: rgb(224, 158, 133);
+    background-color: rgb(83, 134, 134);
 }
 
 a {
